@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="icon"
+      href="https://bcw.blob.core.windows.net/public/img/9977764104160066"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/7.0.96/css/materialdesignicons.min.css"
+      integrity="sha512-fXnjLwoVZ01NUqS/7G5kAnhXNXat6v7e3M9PhoMHOTARUMCaf5qNO84r5x9AFf5HDzm3rEZD8sb/n6dZ19SzFA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="assets/style/main.css" />
+    <link rel="stylesheet" href="assets/style/style.css" />
+    <title>rain_money</title>
+  </head>
+
+  <body>
+    <header>
+      <nav
+        class="navbar navbar-dark navbar-expand bg-dark text-light no-select"
+      >
+        <a class="navbar-brand ms-3" href="#">
+          <i class="mdi mdi-weather-pouring"></i>
+          <span class="ms-2">Rain Money</span>
+        </a>
+      </nav>
+    </header>
+    <main>
+      <div class="container-fluid">
+        <div class="row mt-5">
+          <!-- SECTION form here -->
+          <div class="col-md-5">
+            <div class="bg-white rounded elevation-1 m-1 p-3">
+              <form onsubmit="app.ordersController.createItem()">
+                <div>
+                  <p>
+                    Stache away money for the things you often forget. The
+                    things you want but might not always be at the front of your
+                    mind.
+                  </p>
+                </div>
+                <div class="mb-3">
+                  <label for="exampleInputEmail1" class="form-floating"
+                    >Create a Budget</label
+                  >
+                  <input
+                    type="email"
+                    class="form-control"
+                    aria-describedby="emailHelp"
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="exampleInputPassword1" class="form-label"
+                    >Set A Price</label
+                  >
+                  <input type="password" class="form-control" />
+                </div>
+                <div class="form-floating">
+                  <select class="form-select" id="floatingSelectGrid">
+                    <option selected>Type</option>
+                    <option value="1">Item to Buy</option>
+                    <option value="2">Trip To Budget</option>
+                    <option value="3">Furniture to Replace</option>
+                  </select>
+                  <label for="floatingSelectGrid">Works with selects</label>
+                </div>
+                <div class="mb-3 form-check"></div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </form>
+            </div>
+          </div>
+          <!-- SECTION Savings Cards here -->
+          <div id="budgets">
+            <div class="col-md-6">
+              <div class="card">
+                <div class="card-body">
+                  <div
+                    class="d-flex justify-content-between align-items-center"
+                  >
+                    <div class="d-flex gap-3">
+                      <input type="checkbox" />
+                      <h4>New TV</h4>
+                    </div>
+                    <div>Money of Money</div>
+                  </div>
+                  <ul class="list-group elevation-1 mb-3">
+                    <li class="d-flex justify-content-between list-group-item">
+                      <span>Sell Old TV</span>
+                      <span>$120</span>
+                    </li>
+                    <li class="d-flex justify-content-between list-group-item">
+                      <span>Birthday Money</span>
+                      <span>$60</span>
+                    </li>
+                    <li class="d-flex justify-content-between list-group-item">
+                      <span>60 from the next 3 paychecks</span>
+                      <span>$180</span>
+                    </li>
+                  </ul>
+                  <form class="bg-info rounded p-1" onsubmit="">
+                    <div class="d-flex w-100">
+                      <div class="flex-grow-1">
+                        <input
+                          class="form-control square-right"
+                          type="text"
+                          required
+                          minlength="2"
+                          name="name"
+                          placeholder="Source of Savings..."
+                        />
+                        <label for="name" class="visually-hidden">Source</label>
+                      </div>
+                      <div>
+                        <input
+                          class="form-control square"
+                          type="number"
+                          required
+                          min="0"
+                          name="price"
+                          placeholder="0.00"
+                        />
+                        <label for="price" class="visually-hidden">Money</label>
+                      </div>
+                      <button
+                        type="submit"
+                        class="btn btn-info square-left"
+                        title="Add Item"
+                      >
+                        <b><i class="mdi mdi-plus text-light"></i></b>
+                      </button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="bg-dark text-light">
+      <div class="text-center no-select">
+        <p><small>Made with 💖 by CodeWorks</small></p>
+      </div>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/sweetalert2@11.3.10/dist/sweetalert2.all.min.js"
+      integrity="sha256-hw7v8jZF/rFEdx1ZHepT4D73AFTHLu/P9kEyrNesRyc="
+      crossorigin="anonymous"
+    ></script>
+    <script src="app/App.js" type="module"></script>
+  </body>
+</html>
